@@ -48,7 +48,6 @@ jobs:
             sed -e 's@./\(.*\)/Makefile@\1/@')
           for ROOT in $PKG_ROOTS; do
             PACKAGES+=$(echo "$ROOT" | sed -e 's@\(.*\)/@\1 @')
-            break
           done
           # fallback to test packages if nothing explicitly changes this is
           # should run if other mechanics in packages.git changed
